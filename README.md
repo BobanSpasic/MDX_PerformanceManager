@@ -1,2 +1,2 @@
-# MDX_PerformanceManager
+# Performance Manager
 Performance manager for MiniDexed performance files
