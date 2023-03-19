@@ -1,0 +1,204 @@
+object frmMain: TfrmMain
+  Left = 407
+  Height = 784
+  Top = 155
+  Width = 1100
+  Caption = 'Performance Manager 1.0.1.10'
+  ClientHeight = 784
+  ClientWidth = 1100
+  FormStyle = fsStayOnTop
+  KeyPreview = True
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnKeyUp = FormKeyUp
+  OnResize = FormResize
+  LCLVersion = '2.2.6.0'
+  object pnLeft: TPanel
+    Left = 0
+    Height = 761
+    Top = 0
+    Width = 500
+    Align = alLeft
+    ClientHeight = 761
+    ClientWidth = 500
+    TabOrder = 0
+    object roLeft: TJvRollOut
+      Left = 1
+      Height = 170
+      Top = 1
+      Width = 498
+      Align = alTop
+      ButtonFont.Color = clWindowText
+      ButtonFont.Style = [fsBold]
+      ButtonStyle = bsButton
+      Caption = '. . .'
+      Colors.Color = clDefault
+      TabOrder = 0
+      FAWidth = 145
+      FAHeight = 170
+      FCWidth = 22
+      FCHeight = 22
+      object stvLeft: TShellTreeView
+        Left = 1
+        Height = 148
+        Top = 21
+        Width = 496
+        Align = alClient
+        AutoExpand = True
+        FileSortType = fstAlphabet
+        ReadOnly = True
+        TabOrder = 0
+        OnClick = stvClick
+        Options = [tvoAutoExpand, tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
+        ObjectTypes = [otFolders]
+      end
+    end
+    object sgLeft: TStringGrid
+      Left = 1
+      Height = 589
+      Top = 171
+      Width = 498
+      Align = alClient
+      AutoEdit = False
+      AutoFillColumns = True
+      ColCount = 3
+      Columns = <      
+        item
+          Title.Caption = 'Title'
+          Width = 430
+        end      
+        item
+          Title.Caption = 'Title'
+          Width = 0
+          Visible = False
+        end>
+      DragMode = dmAutomatic
+      FixedRows = 0
+      Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goEditing, goRowSelect, goThumbTracking, goSmoothScroll, goFixedRowNumbering]
+      TabOrder = 1
+      OnDragDrop = sgDragDrop
+      OnDragOver = sgDragOver
+      OnEditingDone = sgEditingDone
+      OnKeyDown = sgKeyDown
+      OnMouseDown = sgMouseDown
+      OnSelection = sgSelection
+      ColWidths = (
+        64
+        430
+        0
+      )
+    end
+  end
+  object pnRight: TPanel
+    Left = 505
+    Height = 761
+    Top = 0
+    Width = 595
+    Align = alClient
+    ClientHeight = 761
+    ClientWidth = 595
+    TabOrder = 1
+    object roRight: TJvRollOut
+      Left = 1
+      Height = 170
+      Top = 1
+      Width = 593
+      Align = alTop
+      ButtonFont.Color = clWindowText
+      ButtonFont.Style = [fsBold]
+      ButtonStyle = bsButton
+      Caption = '. . .'
+      Colors.Color = clDefault
+      TabOrder = 0
+      FAWidth = 145
+      FAHeight = 170
+      FCWidth = 22
+      FCHeight = 22
+      object stvRight: TShellTreeView
+        Left = 1
+        Height = 148
+        Top = 21
+        Width = 591
+        Align = alClient
+        AutoExpand = True
+        FileSortType = fstAlphabet
+        ReadOnly = True
+        TabOrder = 0
+        OnClick = stvClick
+        Options = [tvoAutoExpand, tvoAutoItemHeight, tvoHideSelection, tvoKeepCollapsedNodes, tvoReadOnly, tvoShowButtons, tvoShowLines, tvoShowRoot, tvoToolTips, tvoThemedDraw]
+        ObjectTypes = [otFolders]
+      end
+    end
+    object sgRight: TStringGrid
+      Left = 1
+      Height = 589
+      Top = 171
+      Width = 593
+      Align = alClient
+      AutoEdit = False
+      AutoFillColumns = True
+      ColCount = 3
+      Columns = <      
+        item
+          Title.Caption = 'Title'
+          Width = 525
+        end      
+        item
+          Title.Caption = 'Title'
+          Visible = False
+        end>
+      DragMode = dmAutomatic
+      FixedRows = 0
+      Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goEditing, goRowSelect, goThumbTracking, goSmoothScroll, goFixedRowNumbering]
+      TabOrder = 1
+      OnDragDrop = sgDragDrop
+      OnDragOver = sgDragOver
+      OnEditingDone = sgEditingDone
+      OnKeyDown = sgKeyDown
+      OnMouseDown = sgMouseDown
+      OnSelection = sgSelection
+      ColWidths = (
+        64
+        525
+        0
+      )
+    end
+  end
+  object Splitter: TSplitter
+    Left = 500
+    Height = 761
+    Top = 0
+    Width = 5
+  end
+  object StatusBar: TStatusBar
+    Left = 0
+    Height = 23
+    Hint = 'Mouse buttons without Shift or Ctrl = Exchange rows'#13#10'============================================'#13#10'Combinations of mouse button and Shift or Ctrl:'#13#10'----------------------------------------------------------------------'#13#10'Left mouse button = Copy'#13#10'Right mouse button = Move'#13#10#13#10'+Shift = Insert a row and move all the remaining rows downwards'#13#10'+ Ctrl = Overwrite a row'#13#10'============================================'#13#10'Del = Delete a row and move all the remaining rows upwards'#13#10'Del + Shift = Delete a row and do not move any rows'#13#10'Ins = Insert an empty row and move remaining rows downwards'#13#10'Ins + Shift = Insert an empty row and move the remaining rows '#13#10'                       downwards inside a block'#13#10'============================================'#13#10'F2 = Edit name'#13#10#13#10#13#10#13#10#13#10#13#10#13#10
+    Top = 761
+    Width = 1100
+    Panels = <    
+      item
+        Width = 400
+      end    
+      item
+        Alignment = taCenter
+        Width = 75
+      end    
+      item
+        Alignment = taCenter
+        Width = 75
+      end    
+      item
+        Alignment = taRightJustify
+        Width = 400
+      end    
+      item
+        Text = '?'
+        Width = 30
+      end>
+    ParentShowHint = False
+    SimplePanel = False
+    ShowHint = True
+  end
+end
